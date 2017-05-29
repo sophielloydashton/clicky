@@ -15,7 +15,7 @@ html, body{
       font-family: "effrarbold";
       src: url(../fonts/effrabold.woff) format("truetype");}
 
-/*landing container*/
+      /*landing container*/
       .land-container {
         background-image: url(../images/landing_bg.jpg);
         background-size: cover !important;
@@ -61,7 +61,7 @@ html, body{
         margin-top: -1em;
       }
 
-/*I wanted my enquire button to have a transition to make it stand out from the other option on the menu list*/
+      /*I wanted my enquire button to have a transition to make it stand out from the other option on the menu list*/
       #enquire_button:hover {
         background-color: white;
         color: black;
@@ -86,19 +86,19 @@ html, body{
       #enquire_now_button:hover {
         color: white;
         background: none;
-                -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in;
+        -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in;
       }
 
       .enquire_button_container {
         width: 100%;
       }
-/*When I changed the size of the web page I didn't want to menu items to overlap with the logo so I created a media query*/
+      /*When I changed the size of the web page I didn't want to menu items to overlap with the logo so I created a media query*/
       @media (max-width: 800px) {
-  .menu ul {
-    width: 100%;
-    margin-top: 10%;
-    }
-}
+        .menu ul {
+          width: 100%;
+          margin-top: 10%;
+        }
+      }
 
       /*Slider styling*/
 
@@ -114,10 +114,10 @@ html, body{
       #pages ul {
         display: block;
         -webkit-margin-before: 0em;
--webkit-margin-after: 0em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
--webkit-padding-start: 40px;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
       }
 
       a {
@@ -341,10 +341,10 @@ html, body{
         color: #222;
       }
 
-.tiles_container {
-display: flex;
-white-space: nowrap;
-}
+      .tiles_container {
+        display: flex;
+        white-space: nowrap;
+      }
       .tile_1, .tile_2, .tile_3, .tile_4 {
         display: inline-block;
         text-align: center;
@@ -359,7 +359,7 @@ white-space: nowrap;
 
       .tile_1:hover, .tile_2:hover, .tile_3:hover, .tile_4:hover {
         opacity: 0.8;
-}
+      }
       .tile_1 h1, .tile_2 h1, .tile_3 h1, .tile_4 h1 {
         font-weight: lighter!important;
       }
@@ -393,10 +393,10 @@ white-space: nowrap;
 
       /*blog*/
 
-.blog_container {
-/*display: inline-block;*/
-display: block;
-}
+      .blog_container {
+        /*display: inline-block;*/
+        display: block;
+      }
       .blog h1 {
         font-family: "effralight";
         text-align: center;
