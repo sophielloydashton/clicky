@@ -1,5 +1,5 @@
-#Clicky Development Test.
-######Sophie Lloyd Ashton 
+# Clicky Development Test.
+###### Sophie Lloyd Ashton
 I first looked at the brief I was given to help determine where to start with the development test. As the brief said that Clicky would like to see the page built from scratch, I ruled out any frameworks such as Bootstrap.
 I tried to get the website looking as much like the Photoshop version (wireframe) provided to me, while also making the web page responsive. Once I did this I also added some animation to the page.
 
