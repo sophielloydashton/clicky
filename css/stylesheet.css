@@ -1,0 +1,408 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*font types*/
+@font-face {
+  font-family: "effralight";
+  src: url(../fonts/effralight.woff) format("truetype");}
+  @font-face {
+    font-family: "effraregular";
+    src: url(../fonts/effraregular.woff) format("truetype");}
+    @font-face {
+      font-family: "effrarbold";
+      src: url(../fonts/effrabold.woff) format("truetype");}
+
+/*landing container*/
+      .land-container {
+        background-image: url(../images/landing_bg.jpg);
+        background-size: cover !important;
+        display: flex;
+        min-height: 100%;
+      }
+
+      .land-inner-container {
+        width: 960px;
+        margin-left: 12%;
+        margin-top: 4%;
+        height: 110vh;
+      }
+
+      .logo {
+        position: absolute;
+      }
+
+      .logo img {
+        width: 45%;
+      }
+
+      .menu ul {
+        float: right;
+        color: #fff;
+
+      }
+      .menu li {
+        list-style-type: none;
+        float: left;
+        padding-right: 1em;
+        font-family: "effralight";
+      }
+      #enquire_button {
+        display: inline-block;
+        border: 2px solid white ;
+        border-radius: 20px;
+        padding: 0.75em 1.5em;
+        width: 7em;
+        font-family: "effraregular";
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: -1em;
+      }
+
+/*I wanted my enquire button to have a transition to make it stand out from the other option on the menu list*/
+      #enquire_button:hover {
+        background-color: white;
+        color: black;
+        -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in;
+      }
+
+      #enquire_now_button {
+        display: inline-block;
+        border: 2px solid white;
+        font-size: 0.9em;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 0.75em 1.5em;
+        width: 7em;
+        font-family: "effrarbold";
+        text-align: center;
+        text-transform: uppercase;
+        background: white;
+        color: black;
+      }
+
+      #enquire_now_button:hover {
+        color: white;
+        background: none;
+                -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in;
+      }
+
+      .enquire_button_container {
+        width: 100%;
+      }
+/*When I changed the size of the web page I didn't want to menu items to overlap with the logo so I created a media query*/
+      @media (max-width: 800px) {
+  .menu ul {
+    width: 100%;
+    margin-top: 10%;
+    }
+}
+
+      /*Slider styling*/
+
+      #slider {
+        font-family: "effralight";
+        color: white;
+        top: 0; right: 0; bottom: 0; left: 0;
+        overflow: hidden;
+        -webkit-transition: background-color 0.6s ease-in-out 0s;
+        transition: background-color 0.6s ease-in-out 0s;
+      }
+
+      #pages ul {
+        display: block;
+        -webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #pages {
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        right: 30%;
+        padding: 0;
+        margin-top: 0%;
+      }
+
+      #pages li {
+        right: 0;
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+
+        display: inline-block;
+        visibility: hidden;
+        position: relative;
+        display: none;
+
+      }
+
+      #pages li h1 {
+        font-family: "effralight";
+        color: #fff;
+        font-size: 5.5vw;
+        font-weight: lighter;
+        text-align: left;
+        margin: 0 0;
+      }
+      #pages li h3 {
+        font-family: "effralight";
+        color: #fff;
+      }
+      #pages li p {
+        font-family: "effralight";
+        color: #fff;
+      }
+
+      #pages .selected {
+        opacity: 1;
+        visibility: visible;
+        display: initial;
+      }
+
+
+      .arrow {
+        position: absolute;
+        top: 0;
+        bottom: 70px;
+        width: 20px;
+        height: 20px;
+        padding: 5px; /* Arrow size */
+        margin: auto 0;
+        z-index: 1000;
+        cursor: pointer;
+
+
+        border: solid transparent;
+        border-width: 0 0 2rem 2rem;
+        box-shadow: 1px -1px 0 1px white inset;
+        -webkit-box-shadow: 2px -2px white inset;
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;
+      }
+
+      .arrow:hover {
+        box-shadow: 2px -2px 0 2px white inset;
+        -webkit-box-shadow: 4px -4px white inset;
+      }
+
+      .hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #prev {
+        left: 15%;
+        top: 30%;
+        -webkit-transform: rotate(45deg) scale(0.8);
+        transform: rotate(45deg) scale(0.8);
+      }
+
+      #next {
+        right: 18%;
+        top: 33%;
+        -webkit-transform: rotate(225deg) scale(0.8);
+        transform: rotate(225deg) scale(0.8);
+      }
+
+      #next:hover {
+        -webkit-transform: rotate(225deg) scale(1.0);
+        transform: rotate(225deg) scale(1.0);
+      }
+
+      #prev:hover {
+        -webkit-transform: rotate(45deg) scale(1.0);
+        transform: rotate(45deg) scale(1.0);
+      }
+
+      /* navigation */
+      .navigation {
+        width: 100%;
+        bottom: -20%;
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        font-size: 0;
+        height: 60px;
+        z-index: 10;
+        text-align: center;
+      }
+
+      .navigation li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navigation a {
+        display: block;
+        padding: 15px 4px;
+      }
+
+      .navigation span {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 100%;
+        opacity: 0.6;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+      }
+
+      .navigation a:hover span {
+        opacity: 1;
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+      }
+
+      .navigation a.selected span {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+
+      /*Our Services*/
+
+      .our-services h1 {
+        font-family: "effralight";
+        text-align: center;
+        font-weight: lighter;
+      }
+      .our-services p {
+        font-family: "effraregular";
+        text-align: center;
+      }
+
+
+      /*Services*/
+      .services{
+
+        background-image: url(../images/services_bg.jpg);
+        background-size: cover;
+        min-height: 100%;
+        padding: 7em;
+      }
+
+      .services h1 {
+        font-family: "effralight";
+        text-align: center;
+        font-weight: lighter;
+        color: #fff;
+      }
+      .services p {
+        font-family: "effraregular";
+        text-align: center;
+        color: #fff;
+      }
+
+      #find_out_button {
+        display: block;
+        border: 2px solid white ;
+        border-radius: 20px;
+        padding: 0.75em 1.5em;
+        width: 8em;
+        font-family: "effraregular";
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2em;
+        margin: auto;
+        color: #fff;
+      }
+
+      #find_out_button:hover {
+        display: block;
+        background: white;
+        -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in;
+        border: 2px solid white ;
+        border-radius: 20px;
+        padding: 0.75em 1.5em;
+        width: 8em;
+        font-family: "effraregular";
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2em;
+        margin: auto;
+        color: #222;
+      }
+
+.tiles_container {
+display: flex;
+white-space: nowrap;
+}
+      .tile_1, .tile_2, .tile_3, .tile_4 {
+        display: inline-block;
+        text-align: center;
+        width: 24.85%;
+        float: left;
+        border: 1px solid #fff;
+        font-family: "effralight";
+        text-align: center;
+        color: #fff;
+        font-weight: lighter;
+      }
+
+      .tile_1:hover, .tile_2:hover, .tile_3:hover, .tile_4:hover {
+        opacity: 0.8;
+}
+      .tile_1 h1, .tile_2 h1, .tile_3 h1, .tile_4 h1 {
+        font-weight: lighter!important;
+      }
+
+      .tile_1 {
+        background-image: url(../images/tile_1_bg.jpg);
+        background-size: cover;
+        min-height: 100%;
+        padding: 7em 0em;
+        font-weight: lighter!important;
+
+      }
+      .tile_2 {
+        background-image: url(../images/tile_2_bg.jpg);
+        background-size: cover;
+        min-height: 100%;
+        padding: 7em 0em;
+      }
+      .tile_3 {
+        background-image: url(../images/tile_3_bg.jpg);
+        background-size: cover;
+        min-height: 100%;
+        padding: 7em 0em;
+      }
+      .tile_4 {
+        background-image: url(../images/tile_4_bg.jpg);
+        background-size: cover;
+        min-height: 100%;
+        padding: 7em 0em;
+      }
+
+      /*blog*/
+
+.blog_container {
+/*display: inline-block;*/
+display: block;
+}
+      .blog h1 {
+        font-family: "effralight";
+        text-align: center;
+        font-weight: lighter;
+      }
+      .blog p {
+        font-family: "effraregular";
+        text-align: center;
+      }
