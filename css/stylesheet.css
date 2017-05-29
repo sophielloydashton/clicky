@@ -4,7 +4,7 @@ html, body{
   height: 100%;
 }
 
-/*font types*/
+/*fonts*/
 @font-face {
   font-family: "effralight";
   src: url(../fonts/effralight.woff) format("truetype");}
@@ -49,6 +49,7 @@ html, body{
         padding-right: 1em;
         font-family: "effralight";
       }
+      /*button*/
       #enquire_button {
         display: inline-block;
         border: 2px solid white ;
@@ -170,7 +171,6 @@ html, body{
         display: initial;
       }
 
-
       .arrow {
         position: absolute;
         top: 0;
@@ -181,8 +181,6 @@ html, body{
         margin: auto 0;
         z-index: 1000;
         cursor: pointer;
-
-
         border: solid transparent;
         border-width: 0 0 2rem 2rem;
         box-shadow: 1px -1px 0 1px white inset;
@@ -276,9 +274,7 @@ html, body{
         transform: scale(1);
       }
 
-
       /*Our Services*/
-
       .our-services h1 {
         font-family: "effralight";
         text-align: center;
@@ -289,10 +285,8 @@ html, body{
         text-align: center;
       }
 
-
       /*Services*/
       .services{
-
         background-image: url(../images/services_bg.jpg);
         background-size: cover;
         min-height: 100%;
